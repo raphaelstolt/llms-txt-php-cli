@@ -1,12 +1,10 @@
-# llms-txt-php
+# llms-txt-php-cli
 
-> llms-txt-php is a library for writing and reading /llms.txt Markdown files, written in PHP.
+> llms-txt-php-cli is a symfony/console based CLI wrapper around the llms-txt-php library.
 
-You can use llms-txt-php to write, read, and validate /llms.txt files.
-
-llms-txt-php includes a CLI command to validate /llms.txt files.
+You can use llms-txt-php-cli to interact with /llms.txt files from the console.
 
 ## Reference
 
 - [/llms.txt proposal](https://llmstxt.org/)
-- [llms-txt-php documentation](https://github.com/raphaelstolt/llms-txt-php/blob/main/README.md)
+- [llms-txt-php-cli documentation](https://github.com/raphaelstolt/llms-txt-php-cli/blob/main/README.md)
