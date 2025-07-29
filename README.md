@@ -17,7 +17,7 @@ This CLI supports you in creating and validating [llms.txt](https://llmstxt.org/
 ## Installation and usage
 
 ```bash
-composer require stolt/llms-txt-php-cli
+composer require --dev stolt/llms-txt-php-cli
 ```
 
 ### Available commands
