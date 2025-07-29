@@ -39,7 +39,7 @@ final class ValidateCommandTest extends TestCase
         $libraryLlmsTxtFile = \dirname(\dirname(\dirname(__FILE__))) . '/llms.txt';
 
         $expectedOutput = <<<CONTENT
-The provided llms txt file {$libraryLlmsTxtFile} is valid.
+The provided llms.txt file {$libraryLlmsTxtFile} is valid.
 CONTENT;
 
         TestCommand::for($validateCommand)
@@ -59,7 +59,7 @@ CONTENT;
 
         $libraryLlmsTxtFile = \realpath(\dirname(\dirname(\dirname(__FILE__))) . '/README.md');
         $expectedOutput = <<<CONTENT
-The provided llms txt file {$libraryLlmsTxtFile} is invalid.
+The provided llms.txt file {$libraryLlmsTxtFile} is invalid.
 CONTENT;
 
         TestCommand::for($validateCommand)
@@ -78,7 +78,7 @@ CONTENT;
         );
 
         $expectedOutput = <<<CONTENT
-The delivered llms txt file from
+The delivered llms.txt file from
 CONTENT;
 
         TestCommand::for($validateCommand)

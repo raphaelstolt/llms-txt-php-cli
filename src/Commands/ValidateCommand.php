@@ -14,7 +14,7 @@ final class ValidateCommand extends Command
 {
     private LlmsTxt $llmsTxt;
 
-    public const NOT_LLMS_TXT_FOUND_AT_URI = 'no llms txt file found at uri';
+    public const NOT_LLMS_TXT_FOUND_AT_URI = 'no llms.txt file found at uri';
 
     public function __construct(LlmsTxt $llmsTxt)
     {
@@ -25,10 +25,10 @@ final class ValidateCommand extends Command
     protected function configure(): void
     {
         $this->setName('validate');
-        $description = 'Validate the given llms txt file';
+        $description = 'Validate the given llms.txt file';
         $this->setDescription($description);
 
-        $llmsTxtFileDescription = 'The llms txt file to validate';
+        $llmsTxtFileDescription = 'The llms.txt file to validate';
 
         $this->addArgument(
             'llms-txt-file',
@@ -37,7 +37,7 @@ final class ValidateCommand extends Command
             'llms.txt'
         );
 
-        $uriDescription = 'The URI at which to look for a llms txt file';
+        $uriDescription = 'The URI at which to look for a llms.txt file';
 
         $this->addArgument(
             'uri',
@@ -73,7 +73,7 @@ final class ValidateCommand extends Command
             $remoteLlmTxtContent = $this->getLlmsTxtFileContentFromUrl($llmsTxtFileToValidate . DIRECTORY_SEPARATOR . 'llms.txt');
 
             if ($remoteLlmTxtContent === self::NOT_LLMS_TXT_FOUND_AT_URI) {
-                $warning = \sprintf("Warning: No llms txt file found at the provided URI %s.", $llmsTxtFileToValidate);
+                $warning = \sprintf("Warning: No llms.txt file found at the provided URI %s.", $llmsTxtFileToValidate);
                 $outputContent = '<error>' . $warning . '</error>';
                 $output->writeln($outputContent);
 
@@ -89,13 +89,13 @@ final class ValidateCommand extends Command
             }
 
             if ($parsedLlmsTxt->validate()) {
-                $response = \sprintf('The delivered llms txt file from %s is <info>valid</info>.', $llmsTxtFileToValidate);
+                $response = \sprintf('The delivered llms.txt file from %s is <info>valid</info>.', $llmsTxtFileToValidate);
                 $output->writeln($response);
 
                 return Command::SUCCESS;
             }
 
-            $response = \sprintf('The delivered llms txt file from %s is <info>valid</info>.', $llmsTxtFileToValidate);
+            $response = \sprintf('The delivered llms.txt file from %s is <info>valid</info>.', $llmsTxtFileToValidate);
             $output->writeln($response);
 
             return Command::FAILURE;
@@ -103,7 +103,7 @@ final class ValidateCommand extends Command
             $llmsTxtFileToValidate = \realpath($llmsTxtFileToValidate);
 
             if ($llmsTxtFileToValidate === false || \file_exists($llmsTxtFileToValidate) === false) {
-                $warning = \sprintf("Warning: The provided llms txt file %s does not exists.", $llmsTxtFileToValidate);
+                $warning = \sprintf("Warning: The provided llms.txt file %s does not exists.", $llmsTxtFileToValidate);
                 $outputContent = '<error>' . $warning . '</error>';
                 $output->writeln($outputContent);
 
@@ -113,13 +113,13 @@ final class ValidateCommand extends Command
             $parsedLlmsTxt = $this->llmsTxt->parse($llmsTxtFileToValidate);
 
             if ($parsedLlmsTxt->validate()) {
-                $response = \sprintf('The provided llms txt file %s is <info>valid</info>.', $llmsTxtFileToValidate);
+                $response = \sprintf('The provided llms.txt file %s is <info>valid</info>.', $llmsTxtFileToValidate);
                 $output->writeln($response);
 
                 return Command::SUCCESS;
             }
 
-            $response = \sprintf('The provided llms txt file %s is <error>invalid</error>.', $llmsTxtFileToValidate);
+            $response = \sprintf('The provided llms.txt file %s is <error>invalid</error>.', $llmsTxtFileToValidate);
             $output->writeln($response);
 
             return Command::FAILURE;

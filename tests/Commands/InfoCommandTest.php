@@ -22,7 +22,7 @@ final class InfoCommandTest extends TestCase
         );
 
         $expectedOutput =  <<<OUTPUT
-Warning: The provided llms txt file non-existent-llms.txt does not exists.
+Warning: The provided llms.txt file non-existent-llms.txt does not exists.
 OUTPUT;
 
         TestCommand::for($infoCommand)

@@ -23,10 +23,10 @@ final class CheckLinksCommand extends Command
     protected function configure(): void
     {
         $this->setName('check-links');
-        $description = 'Check links of a llms txt file';
+        $description = 'Check links of a llms.txt file';
         $this->setDescription($description);
 
-        $llmsTxtFileDescription = 'The name of the llms txt file. Defaults to llms.txt';
+        $llmsTxtFileDescription = 'The name of the llms.txt file. Defaults to llms.txt';
 
         $this->addArgument(
             'llms-txt-file',
@@ -45,7 +45,7 @@ final class CheckLinksCommand extends Command
         $llmsTxtFileFullname = \getcwd() . DIRECTORY_SEPARATOR . $llmsTxtFileToAnalyse;
 
         if (\file_exists($llmsTxtFileFullname) === false) {
-            $warning = \sprintf("Warning: The provided llms txt file %s does not exists.", \basename($llmsTxtFileFullname));
+            $warning = \sprintf("Warning: The provided llms.txt file %s does not exists.", \basename($llmsTxtFileFullname));
             $outputContent = '<error>' . $warning . '</error>';
             $output->writeln($outputContent);
 
@@ -112,7 +112,7 @@ final class CheckLinksCommand extends Command
             return Command::FAILURE;
         }
 
-        $output->writeln("All links are reachable.");
+        $output->writeln("All links are <info>reachable</info>.");
 
         return Command::SUCCESS;
     }

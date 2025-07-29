@@ -23,10 +23,10 @@ final class InitCommand extends Command
     protected function configure(): void
     {
         $this->setName('init');
-        $description = 'Create an initial llms txt file';
+        $description = 'Create an initial llms.txt file';
         $this->setDescription($description);
 
-        $llmsTxtFileDescription = 'The name of the llms txt file to initialise. Defaults to llms.txt';
+        $llmsTxtFileDescription = 'The name of the llms.txt file to initialise. Defaults to llms.txt';
 
         $this->addArgument(
             'llms-txt-file',
@@ -46,7 +46,7 @@ final class InitCommand extends Command
 
         if ($initialisedLlmsTxt->getTitle() !== '') {
             if (\file_exists(\getcwd() . DIRECTORY_SEPARATOR . $llmsTxtFileToInitialise)) {
-                $response = \sprintf('The llms txt file <info>%s</info> already exists.', $llmsTxtFileToInitialise);
+                $response = \sprintf('The llms.txt file <info>%s</info> already exists.', $llmsTxtFileToInitialise);
                 $output->writeln($response);
 
                 return Command::FAILURE;
@@ -54,13 +54,13 @@ final class InitCommand extends Command
 
             \file_put_contents(\getcwd() . DIRECTORY_SEPARATOR . $llmsTxtFileToInitialise, $initialisedLlmsTxt->toString());
 
-            $response = \sprintf('Created llms txt file <info>%s</info>.', $llmsTxtFileToInitialise);
+            $response = \sprintf('Created llms.txt file <info>%s</info>.', $llmsTxtFileToInitialise);
             $output->writeln($response);
 
             return Command::SUCCESS;
         }
 
-        $response = \sprintf('Unable to create llms txt file <info>%s</info>.', $llmsTxtFileToInitialise);
+        $response = \sprintf('Unable to create llms.txt file <info>%s</info>.', $llmsTxtFileToInitialise);
         $output->writeln($response);
 
         return Command::FAILURE;

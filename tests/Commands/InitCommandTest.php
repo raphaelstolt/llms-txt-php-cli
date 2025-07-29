@@ -27,7 +27,7 @@ final class InitCommandTest extends TestCase
         );
 
         $expectedOutput = <<<CONTENT
-The llms txt file existing-test.md already exists.
+The llms.txt file existing-test.md already exists.
 CONTENT;
 
         TestCommand::for($initCommand)
@@ -53,7 +53,7 @@ CONTENT;
         );
 
         $expectedOutput = <<<CONTENT
-Created llms txt file init-test.md.
+Created llms.txt file init-test.md.
 CONTENT;
 
         TestCommand::for($initCommand)
@@ -83,7 +83,7 @@ CONTENT;
         $initCommand = new InitCommand($llmsTxtStub);
 
         $expectedOutput = <<<CONTENT
-Unable to create llms txt file init-test.md.
+Unable to create llms.txt file init-test.md.
 CONTENT;
 
         TestCommand::for($initCommand)

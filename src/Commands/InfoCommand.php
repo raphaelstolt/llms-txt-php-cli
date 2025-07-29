@@ -23,10 +23,10 @@ final class InfoCommand extends Command
     protected function configure(): void
     {
         $this->setName('info');
-        $description = 'Get metadata info of a llms txt file';
+        $description = 'Get metadata info of a llms.txt file';
         $this->setDescription($description);
 
-        $llmsTxtFileDescription = 'The name of the llms txt file to analyse. Defaults to llms.txt';
+        $llmsTxtFileDescription = 'The name of the llms.txt file to analyse. Defaults to llms.txt';
 
         $this->addArgument(
             'llms-txt-file',
@@ -45,7 +45,7 @@ final class InfoCommand extends Command
         $llmsTxtFileFullname = \getcwd() . DIRECTORY_SEPARATOR . $llmsTxtFileToAnalyse;
 
         if (\file_exists($llmsTxtFileFullname) === false) {
-            $warning = \sprintf("Warning: The provided llms txt file %s does not exists.", \basename($llmsTxtFileFullname));
+            $warning = \sprintf("Warning: The provided llms.txt file %s does not exists.", \basename($llmsTxtFileFullname));
             $outputContent = '<error>' . $warning . '</error>';
             $output->writeln($outputContent);
 
