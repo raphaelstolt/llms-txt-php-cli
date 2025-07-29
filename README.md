@@ -20,6 +20,22 @@ This CLI supports you in creating and validating [llms.txt](https://llmstxt.org/
 composer require stolt/llms-txt-php-cli
 ```
 
+### Available commands
+
+The following list command call shows the currently available commands.
+
+```bash
+bin/llms-txt-cli list
+
+llms-txt-cli 1.0.0
+
+Available commands:
+  check-links  Check links of a llms txt file
+  info         Get metadata info of a llms txt file
+  init         Create an initial llms txt file
+  validate     Validate the given llms txt file
+```
+
 ### Validating a llms.txt file
 
 ```bash
