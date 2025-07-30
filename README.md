@@ -41,7 +41,7 @@ Available commands:
 ```bash
 bin/llms-txt-cli validate tests/fixtures/uv.llms.md
 
-The provided llms txt file tests/fixtures/uv.llms.md is valid.
+The provided llms.txt file tests/fixtures/uv.llms.md is valid.
 ```
 
 or
@@ -49,7 +49,7 @@ or
 ```bash
 bin/llms-txt-cli validate https://docs.astral.sh/uv/
 
-The delivered llms txt file from https://docs.astral.sh/uv/ is valid.
+The delivered llms.txt file from https://docs.astral.sh/uv/ is valid.
 ```
 
 A `llms.txt` file is considered valid, when a __title__, __description__, __details__, and at least __one section__
@@ -78,7 +78,7 @@ bin/llms-txt-cli info tests/fixtures/uv.llms.md
 ```bash
 bin/llms-txt-cli init [<llms-txt-file>]
 
-Created llms txt file llms.txt.
+Created llms.txt file llms.txt.
 
 cat llms.txt
 
