@@ -7,4 +7,5 @@ You can use llms-txt-php-cli to interact with /llms.txt files from the console.
 ## Reference
 
 - [/llms.txt proposal](https://llmstxt.org/)
+- [llms-txt-php library](https://github.com/raphaelstolt/llms-txt-php)
 - [llms-txt-php-cli documentation](https://github.com/raphaelstolt/llms-txt-php-cli/blob/main/README.md)
