@@ -67,7 +67,7 @@ bin/llms-txt-cli info tests/fixtures/uv.llms.md
     "last_modification": "26.06.2025 06:38:45",
     "file": {
         "name": "tests\/fixtures\/uv.llms.md",
-        "path": "\/home\/vagrant\/workspace\/oss\/llms-txt-php-cli\/tests\/fixtures\/uv.llms.md",
+        "path": "\/home\/stolt\/oss\/llms-txt-php-cli\/tests\/fixtures\/uv.llms.md",
         "size": "4.07K"
     }
 }
@@ -111,7 +111,7 @@ composer test
 
 ### License
 
-This library is licensed under the MIT license. Please see [LICENSE.md](LICENSE.md) for more details.
+This CLI is licensed under the MIT license. Please see [LICENSE.md](LICENSE.md) for more details.
 
 ### Changelog
 
