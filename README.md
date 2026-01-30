@@ -103,6 +103,14 @@ bin/llms-txt-cli check-links tests/fixtures/uv.llms.md
 All links are reachable.
 ```
 
+### Included AI skills
+
+This project [includes](./resources/boost/skills) four AI skills focused on managing a `llms.txt` file:
+- validating: check whether a given `llms.txt` file (local path or URL) is valid and guide fixes until it passes (`llms-txt-validate.md`).
+- initialising: create an initial `llms.txt` file (defaults to `llms.txt` in the repo root) and verify it with validation (`llms-txt-init.md`).
+- info: summarise metadata (sections, links, last modification, file details) and suggest next steps (`llms-txt-info.md`).
+- checking links: run link checking for URLs in `llms.txt` and help fix broken or redirected links (`llms-txt-check-links.md`).
+
 ### Running tests
 
 ``` bash
