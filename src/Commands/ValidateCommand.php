@@ -95,7 +95,7 @@ final class ValidateCommand extends Command
                 return Command::SUCCESS;
             }
 
-            $response = \sprintf('The delivered llms.txt file from %s is <info>valid</info>.', $llmsTxtFileToValidate);
+            $response = \sprintf('The delivered llms.txt file from %s is <info>invalid</info>.', $llmsTxtFileToValidate);
             $output->writeln($response);
 
             return Command::FAILURE;
