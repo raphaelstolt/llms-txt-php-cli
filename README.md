@@ -27,12 +27,13 @@ The following list command call shows the currently available commands.
 ```bash
 bin/llms-txt-cli list
 
-llms-txt-cli 1.0.0
+llms-txt-cli 1.2.0
 
 Available commands:
   check-links  Check links of a llms.txt file
   info         Get metadata info of a llms.txt file
   init         Create an initial llms txt.file
+  render       Render the given llms.txt file
   validate     Validate the given llms txt.file
 ```
 

@@ -7,6 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [v1.2.0] - 2026-04-22
+
+### Added
+- New `render` command to render the llms.txt file.
+
 ## [v1.1.0] - 2026-01-30
 
 ### Added
@@ -16,6 +21,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Initial release.
 
-[Unreleased]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.2.0...HEAD
 
-[v1.1.0]: https://github.com/raphaelstolt/lean-package-validator/compare/v1.0.0...v1.1.0
+[v1.2.0]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.1.0...v1.2.0
+[v1.1.0]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.0.0...v1.1.0

@@ -5,6 +5,7 @@
 use Stolt\LlmsTxt\Cli\Commands\CheckLinksCommand;
 use Stolt\LlmsTxt\Cli\Commands\InfoCommand;
 use Stolt\LlmsTxt\Cli\Commands\InitCommand;
+use Stolt\LlmsTxt\Cli\Commands\RenderCommand;
 use Stolt\LlmsTxt\Cli\Commands\ValidateCommand;
 use Stolt\LlmsTxt\LlmsTxt;
 use Symfony\Component\Console\Application;
@@ -28,7 +29,7 @@ if (false === $autoloaded) {
    exit(1);
 }
 
-\define('VERSION', '1.1.0');
+\define('VERSION', '1.2.0');
 
 $llmsTxt = new LlmsTxt();
 
@@ -36,8 +37,9 @@ $validateCommand = new ValidateCommand($llmsTxt);
 $initialiseCommand = new InitCommand($llmsTxt);
 $infoCommand = new InfoCommand($llmsTxt);
 $checkLinksCommand = new CheckLinksCommand($llmsTxt);
+$renderCommand = new RenderCommand();
 
 $application = new Application('llms-txt-cli', VERSION);
-$application->addCommands([$validateCommand, $initialiseCommand, $infoCommand, $checkLinksCommand]);
+$application->addCommands([$validateCommand, $initialiseCommand, $infoCommand, $checkLinksCommand, $renderCommand]);
 $application->run();
 
