@@ -12,6 +12,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 final class RenderCommand extends Command
 {
+    use CurlExtensionGuard;
+
     public const NOT_LLMS_TXT_FOUND_AT_URI = 'no llms.txt file found at uri';
 
     protected function configure(): void
@@ -69,6 +71,10 @@ final class RenderCommand extends Command
         }
 
         if (\str_starts_with($llmsTxtFileToRender, 'http')) {
+            if ($this->guardCurlExtension($output) === false) {
+                return $this->curlExtensionFailureCode();
+            }
+
             $remoteLlmTxtContent = $this->getLlmsTxtFileContentFromUrl($llmsTxtFileToRender . DIRECTORY_SEPARATOR . 'llms.txt');
 
             if ($remoteLlmTxtContent === self::NOT_LLMS_TXT_FOUND_AT_URI) {

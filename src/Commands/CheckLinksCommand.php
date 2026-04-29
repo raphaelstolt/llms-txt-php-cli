@@ -12,6 +12,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 final class CheckLinksCommand extends Command
 {
+    use CurlExtensionGuard;
+
     private LlmsTxt $llmsTxt;
 
     public function __construct(LlmsTxt $llmsTxt)
@@ -50,6 +52,10 @@ final class CheckLinksCommand extends Command
             $output->writeln($outputContent);
 
             return Command::FAILURE;
+        }
+
+        if ($this->guardCurlExtension($output) === false) {
+            return $this->curlExtensionFailureCode();
         }
 
         $analysedLlmsTxt = $this->llmsTxt->parse($llmsTxtFileFullname);

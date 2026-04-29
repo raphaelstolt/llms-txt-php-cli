@@ -12,6 +12,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 final class ValidateCommand extends Command
 {
+    use CurlExtensionGuard;
+
     private LlmsTxt $llmsTxt;
 
     public const NOT_LLMS_TXT_FOUND_AT_URI = 'no llms.txt file found at uri';
@@ -70,6 +72,10 @@ final class ValidateCommand extends Command
         }
 
         if (\str_starts_with($llmsTxtFileToValidate, 'http')) {
+            if ($this->guardCurlExtension($output) === false) {
+                return $this->curlExtensionFailureCode();
+            }
+
             $remoteLlmTxtContent = $this->getLlmsTxtFileContentFromUrl($llmsTxtFileToValidate . DIRECTORY_SEPARATOR . 'llms.txt');
 
             if ($remoteLlmTxtContent === self::NOT_LLMS_TXT_FOUND_AT_URI) {
