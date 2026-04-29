@@ -55,7 +55,7 @@ final class CheckLinksCommand extends Command
         }
 
         if ($this->guardCurlExtension($output) === false) {
-            return $this->curlExtensionFailureCode();
+            return Command::FAILURE;
         }
 
         $analysedLlmsTxt = $this->llmsTxt->parse($llmsTxtFileFullname);

@@ -72,7 +72,7 @@ final class RenderCommand extends Command
 
         if (\str_starts_with($llmsTxtFileToRender, 'http')) {
             if ($this->guardCurlExtension($output) === false) {
-                return $this->curlExtensionFailureCode();
+                return Command::FAILURE;
             }
 
             $remoteLlmTxtContent = $this->getLlmsTxtFileContentFromUrl($llmsTxtFileToRender . DIRECTORY_SEPARATOR . 'llms.txt');

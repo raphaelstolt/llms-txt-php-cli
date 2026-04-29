@@ -73,7 +73,7 @@ final class ValidateCommand extends Command
 
         if (\str_starts_with($llmsTxtFileToValidate, 'http')) {
             if ($this->guardCurlExtension($output) === false) {
-                return $this->curlExtensionFailureCode();
+                return Command::FAILURE;
             }
 
             $remoteLlmTxtContent = $this->getLlmsTxtFileContentFromUrl($llmsTxtFileToValidate . DIRECTORY_SEPARATOR . 'llms.txt');
