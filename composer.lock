@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12c2ea80f32416e9227f8f6ee54e9d1c",
+    "content-hash": "ac759c750b9c81970efea1efafab71d1",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -166,6 +166,67 @@
                 "source": "https://github.com/php-fig/container/tree/2.0.2"
             },
             "time": "2021-11-05T16:47:00+00:00"
+        },
+        {
+            "name": "stolt/list-skills-command",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/raphaelstolt/list-skills-command.git",
+                "reference": "f0bff5004c25f1f6d7a867b7269599a0416164cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/raphaelstolt/list-skills-command/zipball/f0bff5004c25f1f6d7a867b7269599a0416164cc",
+                "reference": "f0bff5004c25f1f6d7a867b7269599a0416164cc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/console": "^7.3"
+            },
+            "require-dev": {
+                "dg/bypass-finals": "^1.9",
+                "friendsofphp/php-cs-fixer": "^3.70.1",
+                "peckphp/peck": "^0.1.2",
+                "phpstan/phpstan": "^2.1",
+                "phpunit/phpunit": "^11.4.4",
+                "stolt/lean-package-validator": "^4.4",
+                "zenstruck/console-test": "^1.7"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Stolt\\Console\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Raphael Stolt",
+                    "email": "raphael.stolt@gmail.com"
+                }
+            ],
+            "description": "A symfony/console command for listing AI skills files of a project.",
+            "keywords": [
+                "ai",
+                "boost",
+                "cli",
+                "console",
+                "dev",
+                "list",
+                "php",
+                "skills",
+                "symfony"
+            ],
+            "support": {
+                "issues": "https://github.com/raphaelstolt/list-skills-command/issues",
+                "source": "https://github.com/raphaelstolt/list-skills-command/tree/v1.0.0"
+            },
+            "time": "2026-04-29T15:12:46+00:00"
         },
         {
             "name": "stolt/llms-txt-php",
@@ -4963,7 +5024,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "ext-curl": "*"
     },
     "platform-dev": {},
