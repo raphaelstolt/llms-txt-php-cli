@@ -2,6 +2,7 @@
 
 ![Test Status](https://github.com/raphaelstolt/llms-txt-php-cli/workflows/test/badge.svg)
 [![Version](http://img.shields.io/packagist/v/stolt/llms-txt-php-cli.svg?style=flat)](https://packagist.org/packages/stolt/llms-txt-php-cli)
+[![Boost ready](https://img.shields.io/badge/boost-ready-purple.svg?style=flat)](./resources/boost/skills)
 ![Downloads](https://img.shields.io/packagist/dt/stolt/llms-txt-php-cli)
 ![PHP Version](https://img.shields.io/badge/php-8.1+-ff69b4.svg)
 [![PDS Skeleton](https://img.shields.io/badge/pds-skeleton-blue.svg?style=flat)](https://github.com/php-pds/skeleton)
