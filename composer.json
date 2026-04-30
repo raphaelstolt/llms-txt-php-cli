@@ -15,7 +15,7 @@
             "email": "raphael.stolt@gmail.com"
         }
     ],
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
