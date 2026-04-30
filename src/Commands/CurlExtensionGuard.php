@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Stolt\LlmsTxt\Cli\Commands;
 
 use Symfony\Component\Console\Output\OutputInterface;
+
 trait CurlExtensionGuard
 {
     private function guardCurlExtension(OutputInterface $output): bool
