@@ -54,7 +54,6 @@ final class ValidateCommand extends Command
         \curl_setopt($curlHandle, CURLOPT_RETURNTRANSFER, true);
         \curl_setopt($curlHandle, CURLOPT_URL, $url);
         $data = \curl_exec($curlHandle);
-        \curl_close($curlHandle);
 
         if (\str_contains($data, '404')) {
             return self::NOT_LLMS_TXT_FOUND_AT_URI;

@@ -7,6 +7,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [v1.5.2] - 2026-05-01
+
+### Fixed
+- Update of dependencies.
+- Remove deprecated method call.
+
 ## [v1.5.1] - 2026-04-30
 
 ### Fixed
