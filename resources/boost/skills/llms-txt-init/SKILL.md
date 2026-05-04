@@ -1,7 +1,6 @@
 ---
-id: llms-txt-init
-name: "Initialise llms.txt"
-description: "Guide the user to generate an initial llms.txt for a repository using llms-txt-php-cli, choosing sensible defaults and verifying output."
+name: llms-txt-init
+description: Guide the user to generate an initial llms.txt for a repository using llms-txt-php-cli, choosing sensible defaults and verifying output.
 tooling:
 - "llms-txt-php-cli"
   entrypoint_hints:

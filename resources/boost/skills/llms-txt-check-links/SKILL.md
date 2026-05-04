@@ -1,7 +1,6 @@
 ---
-id: llms-txt-check-links
-name: "Check links referenced by llms.txt"
-description: "Run link checking for URLs in llms.txt and help the user fix broken or redirected links."
+name: llms-txt-check-links
+description: Run link checking for URLs in llms.txt and help the user fix broken or redirected links.
 tooling:
 - "llms-txt-php-cli"
   entrypoint_hints:

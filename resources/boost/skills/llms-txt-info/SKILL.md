@@ -1,7 +1,6 @@
 ---
-id: llms-txt-info
-name: "Explain llms-txt-php-cli status/info"
-description: "Use the CLI info command to summarize what llms-txt-php-cli detects/configures for the current repository."
+name: llms-txt-info
+description: Use the CLI info command to summarize what llms-txt-php-cli detects/configures for the current repository.
 tooling:
 - "llms-txt-php-cli"
   entrypoint_hints:

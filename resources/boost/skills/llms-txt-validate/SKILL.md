@@ -1,7 +1,6 @@
 ---
-id: llms-txt-validate
-name: "Validate llms.txt"
-description: "Validate an existing llms.txt with llms-txt-php-cli and guide the user through fixing validation errors."
+name: llms-txt-validate
+description: Validate an existing llms.txt with llms-txt-php-cli and guide the user through fixing validation errors.
 tooling:
 - "llms-txt-php-cli"
   entrypoint_hints:
