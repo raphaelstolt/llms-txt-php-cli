@@ -7,6 +7,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## [Unreleased]
 
+## [v2.0.0] - 2026-09-18
+
+### Added
+- Align CLI with the validation changes in `stolt/llms-txt-php` `^4.0` (output validation warnings for missing optional elements).
+
 ## [v1.5.2] - 2026-05-01
 
 ### Fixed
@@ -50,8 +55,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 - Initial release.
 
-[Unreleased]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.5.2...HEAD
+[Unreleased]: https://github.com/raphaelstolt/llms-txt-php/compare/v2.0.0...HEAD
 
+[v2.0.0]: https://github.com/raphaelstolt/llms-txt-php-cli/compare/v1.5.2...v2.0.0
 [v1.5.2]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.5.1...v1.5.2
 [v1.5.1]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.5.0...v1.5.1
 [v1.5.0]: https://github.com/raphaelstolt/llms-txt-php/compare/v1.4.0...v1.5.0

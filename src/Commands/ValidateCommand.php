@@ -93,15 +93,33 @@ final class ValidateCommand extends Command
                 return Command::FAILURE;
             }
 
-            if ($parsedLlmsTxt->validate()) {
+            $validationResult = $parsedLlmsTxt->validate(true);
+            
+            
+            if ($validationResult instanceof \Stolt\LlmsTxt\Validation\ValidationResult && $validationResult->isValid()) {
                 $response = \sprintf('The delivered llms.txt file from %s is <info>valid</info>.', $llmsTxtFileToValidate);
                 $output->writeln($response);
+                
+                
+                if ($validationResult->hasWarnings()) {
+                    $output->writeln('<comment>Warnings:</comment>');
+                    foreach ($validationResult->warnings() as $warning) {
+                        $output->writeln(\sprintf(' - %s', $warning->message()));
+                    }
+                }
 
                 return Command::SUCCESS;
             }
 
-            $response = \sprintf('The delivered llms.txt file from %s is <info>invalid</info>.', $llmsTxtFileToValidate);
+            $response = \sprintf('The delivered llms.txt file from %s is <error>invalid</error>.', $llmsTxtFileToValidate);
             $output->writeln($response);
+            
+            if ($validationResult instanceof \Stolt\LlmsTxt\Validation\ValidationResult) {
+                $output->writeln('<error>Errors:</error>');
+                foreach ($validationResult->errors() as $error) {
+                    $output->writeln(\sprintf(' - %s', $error->message()));
+                }
+            }
 
             return Command::FAILURE;
         } else {
@@ -117,15 +135,33 @@ final class ValidateCommand extends Command
 
             $parsedLlmsTxt = $this->llmsTxt->parse($llmsTxtFileToValidate);
 
-            if ($parsedLlmsTxt->validate()) {
+            $validationResult = $parsedLlmsTxt->validate(true);
+            
+            
+            if ($validationResult instanceof \Stolt\LlmsTxt\Validation\ValidationResult && $validationResult->isValid()) {
                 $response = \sprintf('The provided llms.txt file %s is <info>valid</info>.', $llmsTxtFileToValidate);
                 $output->writeln($response);
+                
+                
+                if ($validationResult->hasWarnings()) {
+                    $output->writeln('<comment>Warnings:</comment>');
+                    foreach ($validationResult->warnings() as $warning) {
+                        $output->writeln(\sprintf(' - %s', $warning->message()));
+                    }
+                }
 
                 return Command::SUCCESS;
             }
 
             $response = \sprintf('The provided llms.txt file %s is <error>invalid</error>.', $llmsTxtFileToValidate);
             $output->writeln($response);
+            
+            if ($validationResult instanceof \Stolt\LlmsTxt\Validation\ValidationResult) {
+                $output->writeln('<error>Errors:</error>');
+                foreach ($validationResult->errors() as $error) {
+                    $output->writeln(\sprintf(' - %s', $error->message()));
+                }
+            }
 
             return Command::FAILURE;
         }

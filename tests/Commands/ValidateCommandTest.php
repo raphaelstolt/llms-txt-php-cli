@@ -57,7 +57,10 @@ CONTENT;
             new LlmsTxt()
         );
 
-        $libraryLlmsTxtFile = \realpath(\dirname(\dirname(\dirname(__FILE__))) . '/README.md');
+        $libraryLlmsTxtFile = \sys_get_temp_dir() . '/invalid_llms.txt';
+        \file_put_contents($libraryLlmsTxtFile, 'no title here');
+        $libraryLlmsTxtFile = \realpath($libraryLlmsTxtFile);
+        
         $expectedOutput = <<<CONTENT
 The provided llms.txt file {$libraryLlmsTxtFile} is invalid.
 CONTENT;
@@ -67,6 +70,8 @@ CONTENT;
             ->execute()
             ->assertOutputContains($expectedOutput)
             ->assertFaulty();
+            
+        \unlink($libraryLlmsTxtFile);
     }
 
     #[Test]
