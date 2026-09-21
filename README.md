@@ -115,20 +115,15 @@ This project [includes](./resources/boost/skills) four AI skills focused on mana
 - info: summarise metadata (sections, links, last modification, file details) and suggest next steps (`llms-txt-info/SKILL.md`).
 - checking links: run link checking for URLs in `llms.txt` and help fix broken or redirected links (`llms-txt-check-links/SKILL.md`).
 
-### Running tests
-
-``` bash
-composer test
-```
-
-### License
+## License
 
 This CLI is licensed under the MIT license. Please see [LICENSE.md](LICENSE.md) for more details.
 
-### Changelog
+## Changelog
 
-Please see [CHANGELOG.md](CHANGELOG.md) for more details.
+All noteworthy changes are documented in the [CHANGELOG.md](CHANGELOG.md).
 
-### Contributing
+## Contributing
 
-Please see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for more details.
+If you're considering contributing to this CLI, have a look at this repository's [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+for more advice.
